@@ -9,7 +9,7 @@ html { box-sizing: border-box;}
 }
 
 .kontejner > div > :first-child {
-	margin-top: 0;
+	margin-top:0;
 }
 
 .kontejner > div > :last-child {
@@ -19,49 +19,78 @@ html { box-sizing: border-box;}
 
 /* ---------------------------------------------------- */
 
+.kontejner{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: 100px repeat(3,auto) 250px 100px;
+	gap:10px;
+}
+
 /* Nastyluj jednotlivé bloky podle zadání na obrázku */
 
 .logo {
+	grid-row: 1/2;
+	grid-column: 1/2;
 	background-color: #55efc4;
 }
 
 .hlavicka {
+	grid-row:1/2;
+	grid-column: 2/-1;
 	background-color: #74b9ff;
 }
 
 .menu {
+	grid-row:2/3;
+	grid-column: 1/2;
 	background-color: #ff7675;
 }
 
 .clanek1 {
+	grid-row: 2/4;
+	grid-column: 2/-1;
 	background-color: #fdcb6e;
 }
 
 .clanek2 {
+	grid-row:4/5;
+	grid-column: 1/span 2;
 	background-color: #a29bfe;
 }
 
 .reklama1 {
+	grid-row: 3/4;
+	grid-column: 1/2;
 	background-color: #d63031;
 }
 
 .reklama2 {
+	grid-row: 4/5;
+	grid-column: 3/-1;
 	background-color: #00b894;
 }
 
 .foto1 {
+	grid-row: 5/6;
+	grid-column: 1/2;
 	background-color: #e84393;
 }
 
 .foto2 {
+	grid-row: 5/6;
+	grid-column: 2/3;
 	background-color: #e84393;
 }
 
 .foto3 {
+	grid-row: 5/6;
+	grid-column: 3/-1;
 	background-color: #e84393;
 }
 
 .paticka {
+	grid-row: 6/-1;
+	grid-column: 1/-1;
 	background-color: #636e72;
 }
 
