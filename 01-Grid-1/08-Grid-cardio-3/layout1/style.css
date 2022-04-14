@@ -28,3 +28,39 @@ nav {
 	height: 100vh; /* nastavíme výšku gridu přes celou stránku */
 }
 
+.grid{
+	display: grid;
+	grid-template-columns: 3fr repeat(2,1fr);
+	grid-template-rows: 100px auto 100px;
+}
+
+.position{
+	padding-top:10px;
+	padding-left:10px
+}
+
+header{
+	grid-row: 1/2;
+	grid-column: 1/-1;
+;
+}
+
+article{
+	grid-row: 2/3;
+	grid-column: 1/2;
+}
+
+aside {
+	grid-row:2/3;
+	grid-column: 2/3;
+}
+
+nav{
+	grid-row:2/3;
+	grid-column: 3/4;
+}
+
+footer{
+	grid-row: 3/4;
+	grid-column: 1/-1;
+}
